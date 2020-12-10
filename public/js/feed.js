@@ -13,7 +13,7 @@ $(document).ready(() => {
     // get request to get all information for the feed
     $.get("/api/feed").then(music => {
         console.log(music);
-
+        //https://api.spotify.com/v1/tracks/{id}
         
     });
 

@@ -8,7 +8,7 @@ $(document).ready(() => {
 
     // make API call to populate page with new releases
     $.ajax(settings).done(function (response) {
-        
+        //https://api.spotify.com/v1/browse/new-releases
 
 
 
