@@ -7,7 +7,7 @@ $(document).ready(() => {
 
     // Get request to get User's information
     $.get("/api/user_data").then(user => {
-        $(".member-name").prepend(user.username);
+        
     });
     
     // get request to get all information for the feed

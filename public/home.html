@@ -79,7 +79,7 @@
 
 
   <div class="container" id="newDisplay">
-    <h1 id="displayTitle">New Releases</h1>
+    <h1 id="displayTitle">New</h1>
     <div class="row justify-content-center">
       <div class="col-md-10">
         <div class="card-deck">
@@ -93,14 +93,29 @@
 
   <div class="container">
     <div id="results">
+      <ul id="resultList">
+        <table class="table table-dark table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Add</th>
+              <th scope="col">Song</th>
+              <th scope="col">Artist</th>
+            </tr>
+          </thead>
+          <tbody id="songTable">
+
+          </tbody>
+          </table>
+      </ul>
     </div>
+  </div>
   </div>
   <div class="center" id="noResults"></div>
   </div>
 
 
   <!-- Scripts for responsiveness -->
-  <script type="text/javascript" src="./js/userPage.js"></script>
+  <script type="text/javascript" src="./js/home.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
