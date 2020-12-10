@@ -17,7 +17,7 @@ $("#submit").on("click", function (e) {
     console.log(searchTerm);
 
 
-    // make API call to populate page with new releases ------------------------------------------------------
+    // make API call to populate page with top releases ------------------------------------------------------
     const settings = {
         "async": true,
         "crossDomain": true,

@@ -101,7 +101,7 @@ module.exports = function (app) {
             // The user is not logged in, send back an empty object
             res.json({});
         } else {
-            db.Show.findAll({ include: db.User }).then(function (dbSong) {
+            db.Song.findAll({ include: db.User }).then(function (dbSong) {
                 res.json(dbSong);
             });
         }
