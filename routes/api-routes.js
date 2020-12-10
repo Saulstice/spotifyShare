@@ -29,7 +29,7 @@ module.exports = function (app) {
 
 
     // POST song route, creates new song entry in DB ------------------------------------------------------------
-    app.post("/api/songs", function (req, res) {
+    app.post("/api/addSong", function (req, res) {
         console.log(req.body);
         db.Song.create(req.body).then(function (post) {
             res.json(post);
