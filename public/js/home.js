@@ -1,6 +1,8 @@
 // a GET request to figure out which user is logged in
 //  updates the HTML on the page showing ther username
-
+$.get("/api/user_data").then(data => {
+    $(".member-name").text(data.username);
+});
 
 
 // ------------------------------------------------------------------------------------------------------------
@@ -9,6 +11,7 @@
 $("#submit").on("click", function (e) {
     e.preventDefault();
     console.log("Searching");
+    $("#resultsDisplay").removeClass("hide");
     // clear previous results
     $("#songTable").empty();
 
@@ -78,6 +81,11 @@ $("#submit").on("click", function (e) {
                     console.log(res);
                     console.log("Show added to addSong DB table");
                 });
+                
+                $("#addedAlertRes").fadeTo(2000, 500).slideUp(500, function () {
+                    $("#addedAlertRes").slideUp(500);
+                });
+        
 
             })
         });

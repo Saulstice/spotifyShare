@@ -64,10 +64,36 @@ module.exports = function (app) {
             // The user is not logged in, send back an empty object
             res.json({});
         } else {
-            // Otherwise send back the user's username and id
+            // db.User.findOne({
+            //     where: {
+            //         id: req.params.id
+            //     },
+            //     include: db.Song
+            // }).then(function (dbUser) {
+            //     res.json(dbUser)
+            // })
+
             db.Song.findAll({
                 where: {
-                    Userid: req.params.id
+                    UserId: req.params.id
+                }
+            }).then(function (dbSong) {
+
+                res.json(dbSong);
+            });
+        }
+    });
+
+    // Route for finding song from feed -------------------------------------------
+    app.get("/api/oneSong/:id", (req, res) => {
+        if (!req.user) {
+            // The user is not logged in, send back an empty object
+            res.json({});
+        } else {
+  
+            db.Song.findOne({
+                where: {
+                    id: req.params.id
                 }
             }).then(function (dbSong) {
 
@@ -83,11 +109,11 @@ module.exports = function (app) {
             // The user is not logged in, send back an empty object
             res.json({});
         } else {
-            // Otherwise send back the user's username and id
-            db.User.findAll({
+            db.User.findOne({
                 where: {
                     id: req.params.id
-                }
+                },
+                include: db.Song
             }).then(function (dbUser) {
 
                 res.json(dbUser);

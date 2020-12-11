@@ -1,145 +1,27 @@
 body {
     background-color: black;
+    color: white;
     font-family: 'Roboto', sans-serif;
 }
 
-#showSearch {
-    color: white;
-    font-size: 20px;
-}
-
-.modal {
-    color: black;
-}
-
-#newDisplay {
-    margin-top:30px;
-}
-#newDiv {
-    margin-top: 30px;
-    color: white;
-}
-
-.dropdown {
-    margin-top: 20px;
-}
-
-#noResults {
+#welcomeName {
     margin-top: 40px;
-    color: white;
-}
-
-#welcome {
-    color: white;
-    margin-bottom: 2em;
-}
-
-.center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sideScroll {
-    background-color: transparent;
-    overflow: auto;
-    white-space: nowrap;
-}
-
-.sideScroll a {
-    display: inline-block;
-    color: white;
     text-align: center;
-    padding: 14px;
-    text-decoration: none;
+    font-size: 4em;
 }
 
-.sideScroll a:hover {
-    background-color: #777;
-}
-
-.cardButt:focus {
-    outline: none !important;
-}
-
-.card-body {
-    white-space: normal !important;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+#displayTitle {
     text-align: center;
+    margin-top: 40px;
 }
 
-#discussButt:hover, #discussButt1:hover {
-    border: none;
-    background: transparent;
-}
-
-.card:hover {
-    border: 3px solid white;
-}
-
-.card-deck, .score {
-    position: relative;
-}
-
-.score {
-    z-index: 2;
-    padding-bottom: 10px;
-}
-
-.card-deck:after {
-    content: "";
-    position: absolute;
-    left: 90%;
-    z-index: 10;
-    pointer-events: none;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0) 90%);
-    width: 10%;
-    height: 100%;
-}
-
-button {
-    background-color: transparent;
-    border: none;
-}
-
-#addedAlertNew, #addedAlert {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    width: 40%;
-    left: 30%;
-    z-index: 200;
-}
-
-.collapse.in {
-    display: block !important;
-}
 
 .hide {
     display: none;
 }
 
-.navbar {
-    background-color: darkgray;
-    margin-bottom: 30px;
-}
-
-.card-title {
+th {
     font-size: 30px;
-    font-weight: bold;
-}
-
-.card-body {
-    padding-top: 0px;
-}
-
-#submit {
-    margin-bottom: 20px;
-}
-
-#welcomeName {
-    font-size: 4rem;
 }
 
 #addedAlertRes {
@@ -152,31 +34,4 @@ button {
     text-align: center;
     height:50px;
     z-index: 500;
-}
-
-#displayTitle {
-    color: white;
-    padding-left: 15%;
-}
-
-/* making columns for results to be reponsive */
-
-#results {
-    width: 1000px;
-    margin: 20px auto;
-    columns: 3;
-    column-gap: 40px;
-}
-
-/* styling the card for responsive design */
-
-#results .card {
-    width: 100%;
-    margin: 0 0 20px;
-    padding: 10px;
-    break-inside: avoid;
-}
-
-.card {
-    background-color: darkgray;
 }
