@@ -84,6 +84,24 @@ module.exports = function (app) {
         }
     });
 
+    // Route for finding song from feed -------------------------------------------
+    app.get("/api/oneSong/:id", (req, res) => {
+        if (!req.user) {
+            // The user is not logged in, send back an empty object
+            res.json({});
+        } else {
+  
+            db.Song.findOne({
+                where: {
+                    id: req.params.id
+                }
+            }).then(function (dbSong) {
+
+                res.json(dbSong);
+            });
+        }
+    });
+
 
     // GET route to get user based on id parameter ------------------------------------------------------------
     app.get("/api/users/:id", (req, res) => {
