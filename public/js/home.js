@@ -32,7 +32,6 @@ $("#submit").on("click", function (e) {
     $.ajax(settings).done(function (response) {
         var results = response.response.hits;
         console.log(results)
-
         for (var song of results) {
             var addButton = `<button type="button" class="songAdd btn btn-success">Add</button>`
             var songInfo =
@@ -40,28 +39,28 @@ $("#submit").on("click", function (e) {
                 <th scope="Add">${addButton}</th>
                 <td>${song.result.title}</td>
                 <td>${song.result.primary_artist.name}</td>
+                <td style="display:none">${song.result.song_art_image_url}</td>
                 </tr>`
             $("#songTable").append(songInfo);
         }
-
         // On click event  for Add buttons 
         $(".songAdd").on("click", function (e) {
             $.get("/api/user_data").then(data => {
                 e.preventDefault();
                 // getting our user info
-
-
                 console.log(data);
                 var user = data;
 
                 // getting song info to pass to DB under this user
                 var siblings = $(this).parent().siblings()
-                for (let i = 0; i < 2; i++) {
+                for (let i = 0; i < 3; i++) {
                     if (i == 0) {
                         var songName = siblings[i].outerText;
                     }
                     else if (i == 1) {
-                        var songArtist = siblings[i].outerText
+                        var songArtist = siblings[i].outerText;
+                    }else if(i==2){
+                        var songArt=siblings[i].outerText;
                     }
                 };
 
@@ -70,10 +69,10 @@ $("#submit").on("click", function (e) {
                     song: songName,
                     artist: songArtist,
                     UserId: user.id,
-                    albumCover: song.result.song_art_image_url
+                    albumCover: songArt
 
                 };
-                console.log(newSong);
+                //console.log(newSong);
 
                 $.post("/api/addSong", newSong, function (res) {
                     console.log(res);
