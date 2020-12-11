@@ -1,7 +1,7 @@
 {
     "development": {
       "username": "root",
-      "password": null,
+      "password": "password",
       "database": "spotifyDB",
       "host": "localhost",
       "port": 3306,
