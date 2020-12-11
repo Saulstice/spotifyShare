@@ -64,7 +64,15 @@ module.exports = function (app) {
             // The user is not logged in, send back an empty object
             res.json({});
         } else {
-            // Otherwise send back the user's username and id
+            // db.User.findOne({
+            //     where: {
+            //         id: req.params.id
+            //     },
+            //     include: db.Song
+            // }).then(function (dbUser) {
+            //     res.json(dbUser)
+            // })
+
             db.Song.findAll({
                 where: {
                     UserId: req.params.id
@@ -83,11 +91,11 @@ module.exports = function (app) {
             // The user is not logged in, send back an empty object
             res.json({});
         } else {
-            // Otherwise send back the user's username and id
-            db.User.findAll({
+            db.User.findOne({
                 where: {
                     id: req.params.id
-                }
+                },
+                include: db.Song
             }).then(function (dbUser) {
 
                 res.json(dbUser);

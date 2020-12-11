@@ -13,8 +13,11 @@ $(document).ready(() => {
 
             for(i=songs.length-1;i>=0;i--){
                 console.log(songs[i]);
+                var sendButton = `
+            `
                 var songInfol =
                     `<tr>
+                    <td>${sendButton}</td>
                     <td>${songs[i].song}</td>
                     <td>${songs[i].artist}</td>
                     </tr>`
