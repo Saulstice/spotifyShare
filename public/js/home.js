@@ -30,12 +30,10 @@ $("#submit").on("click", function (e) {
     };
 
     $.ajax(settings).done(function (response) {
-
         var results = response.response.hits;
         console.log(results)
 
         for (var song of results) {
-            console.log(song.result.title)
             var addButton = `<button type="button" class="songAdd btn btn-success">Add</button>`
             var songInfo =
                 `<tr>
@@ -67,13 +65,13 @@ $("#submit").on("click", function (e) {
                     }
                 };
 
-                console.log("songName: ", songName, "artist: ", songArtist);
-
                 //creating object to send to DB
                 var newSong = {
                     song: songName,
                     artist: songArtist,
-                    UserId: user.id
+                    UserId: user.id,
+                    albumCover: song.result.song_art_image_url
+
                 };
                 console.log(newSong);
 
