@@ -65,9 +65,11 @@ module.exports = function (app) {
             res.json({});
         } else {
             // Otherwise send back the user's username and id
-            db.Songs.findAll(
-                
-            ).then(function (dbSong) {
+            db.Song.findAll({
+                where: {
+                    UserId: req.params.id
+                }
+            }).then(function (dbSong) {
 
                 res.json(dbSong);
             });
