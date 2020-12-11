@@ -24,12 +24,18 @@ $(document).ready(() => {
         for(i=music.length-1;i>=0;i--){
             console.log(music[i]);
             var songfeed=
-            `<div class="card">
-                <h5 class="card-header">${music[i].User.username.toUpperCase()}</h5>
-                <div class="card-body">
-                    <h5 class="card-title">${music[i].song} by ${music[i].artist} 
-                        added to ${music[i].User.username}'s library</h5>
-                    <p class="card-time">${music[i].createdAt}</p>
+            `<div class="card mb-3">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="${music[i].albumCover}" class="card-img">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">${music[i].song} by ${music[i].artist} 
+                                added to ${music[i].User.username.toUpperCase()}'S library</h5>
+                            <p class="card-time">${music[i].createdAt}</p>
+                        </div>
+                    </div>
                 </div>
             </div>`
             $("#feedDiv").append(songfeed);

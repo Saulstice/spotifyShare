@@ -8,6 +8,10 @@ module.exports = function (sequelize, DataTypes) {
         artist: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        albumCover:{
+            type: DataTypes.STRING,
+            allowNull: true
         }
     }, {});
 
