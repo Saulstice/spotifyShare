@@ -42,7 +42,7 @@ $(document).ready(() => {
                         </div>
                     </div>
                     <div class="col-md-2 align-middle">
-                    <button class="btn btn-primary addBtn" value="${music[i].id}">Add</button>
+                    <button class="btn btn-primary addBtn" value="${music[i].id}"><i class="fas fa-plus">  </i> Add</button>
                     </div>
                 </div>
             </div>
