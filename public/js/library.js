@@ -23,10 +23,6 @@ $(document).ready(() => {
                     </tr>`
                 $("#songTablel").append(songInfol);
             } 
-      
-
-
         });
     });
-
 });
