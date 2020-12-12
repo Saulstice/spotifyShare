@@ -36,7 +36,7 @@ $("#submit").on("click", function (e) {
         var results = response.response.hits;
         console.log(results)
         for (var song of results) {
-            var addButton = `<button type="button" class="songAdd btn btn-success">Add</button>`
+            var addButton = `<button type="button" class="songAdd btn btn-success"><i class="fas fa-plus"> </i>Add</button>`
             var songInfo =
                 `<tr>
                 <th scope="Add">${addButton}</th>
