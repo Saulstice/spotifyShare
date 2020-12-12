@@ -37,6 +37,31 @@ module.exports = function (app) {
 
     });
 
+    // Creating new rec entry in DB ---------------------------------------------
+    app.post("/api/sendRec", function (req, res) {
+        console.log(req.body);
+        db.Rec.create(req.body).then(function (post) {
+            res.json(post);
+        });
+
+    });
+
+    // Gettings user's recs from DB -----------------------------------------------
+    app.get("/api/recs/:id", (req, res) => {
+        if (!req.user) {
+            // The user is not logged in, send back an empty object
+            res.json({});
+        } else {
+            db.Rec.findAll({
+                where: {
+                    recipientId: req.params.id
+                }
+            }).then(function (dbRecs) {
+                res.json(dbRecs);
+            });
+        }
+    });
+
     // Route for logging user out ------------------------------------------------------------
     app.get("/logout", (req, res) => {
         req.logout();
@@ -64,14 +89,6 @@ module.exports = function (app) {
             // The user is not logged in, send back an empty object
             res.json({});
         } else {
-            // db.User.findOne({
-            //     where: {
-            //         id: req.params.id
-            //     },
-            //     include: db.Song
-            // }).then(function (dbUser) {
-            //     res.json(dbUser)
-            // })
 
             db.Song.findAll({
                 where: {
@@ -102,16 +119,15 @@ module.exports = function (app) {
         }
     });
 
-
-    // GET route to get user based on id parameter ------------------------------------------------------------
-    app.get("/api/users/:id", (req, res) => {
+    // GET route to get user based on username parameter ------------------------------------------------------------
+    app.get("/api/users/:username", (req, res) => {
         if (!req.user) {
             // The user is not logged in, send back an empty object
             res.json({});
         } else {
             db.User.findOne({
                 where: {
-                    id: req.params.id
+                    username: req.params.username
                 },
                 include: db.Song
             }).then(function (dbUser) {
