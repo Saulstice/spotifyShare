@@ -2,7 +2,7 @@ require("dotenv").config();
 
 module.exports = {
     "development": {
-      "username": process.env.USERNAME,
+      "username": "kli43ulxb1jihaik",
       "password": "v45lltjnqvy5m812",
       "database": "q6vgsyai9hzuhmbk",
       "host": "ixnzh1cxch6rtdrx.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
