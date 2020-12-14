@@ -1,9 +1,11 @@
-{
+require("dotenv").config();
+
+module.exports = {
     "development": {
-      "username": "root",
-      "password": "Sallah28",
-      "database": "spotifyDB",
-      "host": "localhost",
+      "username": process.env.USERNAME,
+      "password": "v45lltjnqvy5m812",
+      "database": "q6vgsyai9hzuhmbk",
+      "host": "ixnzh1cxch6rtdrx.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
       "port": 3306,
       "dialect": "mysql"
     },
@@ -16,7 +18,7 @@
       "dialect": "mysql"
     },
     "production": {
-      "use_env_variable": "DATABASE_URL",
+      "use_env_variable": "JAWSDB_URL",
       "dialect": "mysql"
     }
 }
