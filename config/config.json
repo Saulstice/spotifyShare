@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "development": {
       "username": "root",
       "password": "password",
@@ -19,4 +20,26 @@
       "use_env_variable": "DATABASE_URL",
       "dialect": "mysql"
     }
+=======
+  "development": {
+    "username": "root",
+    "password": "Sallah28",
+    "database": "spotifyDB",
+    "host": "localhost",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "production": {
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
+  }
+>>>>>>> a0b591b93a20893ff526a7f09eac797a2d65802e
 }

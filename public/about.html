@@ -2,18 +2,15 @@
 <html lang="en">
 
 <head>
-    <title>Recs</title>
+    <title>Home</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-    <link href="css/feedStyles.css" rel="stylesheet">
+    <link href="css/about.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2a34c30808.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -39,10 +36,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/library"><i class="fas fa-book"></i> Library</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="/recommend"><i class="fas fa-users"></i> Recs</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="/about"><i class="fas fa-info-circle"></i> About</a>
                 </li>
             </ul>
@@ -57,33 +54,57 @@
         </div>
     </nav>
 
-    <!-- Welcome message -->
+
+    <!-- About message -->
     <div class="container center">
         <div class="row justify-content-center">
             <div class="col-md-12" id="welcome">
-
+                <h1 id="welcome">About Spotifly</h1>
+                <div class="col-md-6">
+                    <h5>Spotifly is a simple social media platform for music. It allows users to search for and add
+                        their
+                        favorite music to their library. The Global Feed allows users to see what songs other users are
+                        listening to. If a user wants to share a song, they can go to their library and send that song
+                        to a
+                        friend by using their friend's username. The idea was to expand on Spotify's social media
+                        aspect,
+                        where users can see what friends are listening to in real-time.</h5>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="addedAlertRes" class="alert alert-primary hide">Song Added</div>
-
-
-    <div class="container center">
+        <!-- Developers message -->
         <div class="row justify-content-center">
             <div class="col-md-12" id="welcome">
-                <button type="button" id="refresh" class="btn btn-primary"><i class="fas fa-sync-alt"></i>
-                    Refresh</button>
-            </div>
+                <h1 id="welcome">For Developers</h1>
+                <div class="col-md-6">
+                    <h5>This application utilizes a localhost port for development and testing. So, the local port 3306
+                        must enable mySQL to run. When this application is used with heroku in post-production it
+                        utilizes jawsdb which is allows for mysql databases on Heroku.
 
-            <!-- This is the Div where all the DB results will go -->
-            <div id="feedDiv">
-                
+                        To run any tests of the software, type "npm test". We have enabled a debugger to run when this
+                        script is run.
+
+                        api-route.js: app.post("/api/login"... -> this post logins user after authenticating them
+                        app.post("/api/register" -> this post registers a new user app.post("/api/addSong" -> this
+                        creates a song entry in the DB app.post("/api/sendRec" -> this creates a new recommendation
+                        entry in the DB
+
+                        app.get("/api/recs/:id" -> this retrieves a recommendation from the DB app.get("/logout" -> this
+                        logs out the user app.get("/api/user_data" -> retrieving user data for front-end
+                        app.get("/api/songs/:id" -> gets specific users music app.get("/api/oneSong/:id" -> this finds
+                        the song from the feed app.get("/api/users/:username" -> gets the user parameters based on user
+                        app.get("/api/feed" -> gets the music from the DB for the global feed</h5>
+                </div>
             </div>
         </div>
     </div>
+
+
+
+
 
     <!-- Scripts for responsiveness -->
-    <script type="text/javascript" src="./js/recommend.js"></script>
+    <script type="text/javascript" src="./js/home.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>

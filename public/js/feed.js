@@ -17,12 +17,20 @@ $(document).ready(() => {
                 </h1>
                 <br></br>`
             $(".head").prepend(userName);
-
+        } else {
+            var userName =
+                `<h1>
+                <span class="member-name"></span>YOUR    FEED
+                </h1>
+                <br></br>`
+            $(".head").prepend(userName);
         }
     });
     
     $.get("/api/feed").then(music => {
+        console.log(music)
         for (i = music.length - 1; i >= 0; i--) {
+            console.log(music[i].User.username);
             var songfeed =
                 `<div class="row justify-content-center ">
             <div class="card mb-3" style="width: 40rem;">

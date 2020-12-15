@@ -107,7 +107,7 @@ module.exports = function (app) {
             // The user is not logged in, send back an empty object
             res.json({});
         } else {
-  
+
             db.Song.findOne({
                 where: {
                     id: req.params.id
@@ -148,9 +148,6 @@ module.exports = function (app) {
             });
         }
     });
-
-
-
 
 };
 
