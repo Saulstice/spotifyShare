@@ -17,7 +17,13 @@ $(document).ready(() => {
                 </h1>
                 <br></br>`
             $(".head").prepend(userName);
-
+        } else {
+            var userName =
+                `<h1>
+                <span class="member-name"></span>YOUR    FEED
+                </h1>
+                <br></br>`
+            $(".head").prepend(userName);
         }
     });
     
