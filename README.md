@@ -18,7 +18,6 @@ This application utilizes a localhost port for development and testing. So, the 
 
 To run any tests of the software, type "npm test". We have enabled a debugger to run when this script is run.
 
-api-route.js:
 app.post("/api/login"... -> this post logins user after authenticating them
 app.post("/api/register" -> this post registers a new user
 app.post("/api/addSong" -> this creates a song entry in the DB
@@ -33,5 +32,5 @@ app.get("/api/users/:username" -> gets the user parameters based on user
 app.get("/api/feed" -> gets the music from the DB for the global feed
 
 For future dvelopment, expanding the database design to incoporate a network that utilizes nodes and connections to have "friends".
-Nuku Monu
+
 
