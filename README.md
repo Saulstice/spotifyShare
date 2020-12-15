@@ -7,10 +7,10 @@ https://morning-springs-72878.herokuapp.com/
 
 We have designed our product to work with IOS14 since the designers are apple users. As well it should work on Chrome, meaning the website will work for most androids.
 
-(Link to user manual)
+User Manual:
+https://github.com/Saulstice/spotifyShare/blob/main/docs/final.md
 
-(Link to developer manual)
-
+Developer Manual:
 
 Creating a fork from Github, installing this application is similar to installing any other folder from Github. After downloading the files, in the folder, type "npm i" to install all the dependencies that are required for the project.
 
