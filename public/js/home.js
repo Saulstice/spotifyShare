@@ -20,7 +20,7 @@ $("#submit").on("click", function (e) {
     console.log(searchTerm);
 
 
-    // make API call to populate page with top releases ------------------------------------------------------
+    // make API call to populate page with search results ------------------------------------------------------
     const settings = {
         "async": true,
         "crossDomain": true,

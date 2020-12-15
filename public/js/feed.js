@@ -22,6 +22,7 @@ $(document).ready(() => {
     });
     
     $.get("/api/feed").then(music => {
+        console.log(music)
         for (i = music.length - 1; i >= 0; i--) {
             var songfeed =
                 `<div class="row justify-content-center ">
